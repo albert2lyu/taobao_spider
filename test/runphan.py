@@ -4,7 +4,7 @@ from subprocess import (
     Popen,
     PIPE
 )
-from lib.spider import Crawler
+from tools.spider import Crawler
 
 c = Crawler()
 for url in c:

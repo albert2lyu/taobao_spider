@@ -1,7 +1,7 @@
 taobao_spider
 =============
 
-爬取淘宝页面「掌柜热卖」广告数据块
+淘宝的广告数据由ajax异步请求得到， 所以利用phantomjs爬取淘宝页面「掌柜热卖」广告数据块
 
 #Requirements
 - phantomjs
@@ -9,4 +9,5 @@ taobao_spider
 - BeautifulSoup
 
 #Usage
-1. 在keywords/keywords.txt中添加要搜索的关键词，默认是体育类关键词
+1. 在keywords/中添加包含要搜索的关键词的文档「*.txt」
+2. 运行cd lib && python spider.py获得示例
