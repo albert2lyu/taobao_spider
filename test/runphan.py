@@ -1,8 +1,13 @@
+import sys
+sys.path.append('..')
 from subprocess import (
     Popen,
     PIPE
 )
+from lib.spider import Crawler
 
-url = 'http://s.taobao.com/search?q=%D7%E3%C7%F2'
-p = Popen(['phantomjs', '../js/waitfor.js', url], stdout=PIPE)
-print p.communicate()[0]
+c = Crawler()
+for url in c:
+    print url
+    p = Popen(['phantomjs', '../js/waitfor.js', url], stdout=PIPE)
+    print p.communicate()[0]
